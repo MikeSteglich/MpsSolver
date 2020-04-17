@@ -1,0 +1,35 @@
+---------------------------------------------------------------------------------------------------------
+Problem              transportation
+Nr. of variables     8
+Nr. of constraints   7
+Objective name       costs
+Solver name          CBC
+Display variables    nonzero variables (all)
+Display constraints  nonzero constraints (all)
+---------------------------------------------------------------------------------------------------------
+
+Objective status     optimal
+Objective value      39500 (MIN!)
+
+Variables 
+Name                 Type            Activity         Lower bound         Upper bound            Marginal
+---------------------------------------------------------------------------------------------------------
+x[1,1]                  C                3500                   0                 inf                   0
+x[1,2]                  C                1500                   0                 inf                   0
+x[2,2]                  C                2500                   0                 inf                   0
+x[2,3]                  C                2000                   0                 inf                   0
+x[2,4]                  C                1500                   0                 inf                   0
+x[3,1]                  C                2500                   0                 inf                   0
+---------------------------------------------------------------------------------------------------------
+
+Constraints 
+Name                 Type            Activity         Lower bound         Upper bound            Marginal
+---------------------------------------------------------------------------------------------------------
+line_2                  E                5000                5000                5000                   3
+line_3                  E                6000                6000                6000                   6
+line_4                  E                2500                2500                2500                   2
+line_5                  L                6000                -inf                6000                   0
+line_6                  L                4000                -inf                4000                  -1
+line_7                  L                2000                -inf                2000                  -4
+line_8                  L                1500                -inf                1500                  -3
+---------------------------------------------------------------------------------------------------------

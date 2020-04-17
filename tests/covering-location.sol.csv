@@ -1,0 +1,8 @@
+Problem;covering-location.cmpl
+Nr. of variables;6
+Nr. of constraints;6
+Objective name;line_1
+Solver name;GUROBI
+Display variables;(all)
+Display constraints;(all)
+No solution has been found 

@@ -1,0 +1,63 @@
+
+Log started (V12.7.0.0) Fri Apr 17 16:23:19 2020
+
+
+Specified objective sense: MINIMIZE
+Selected objective  name:  line_1
+Selected RHS        name:  RHS
+Selected bound      name:  BOUND
+
+Problem '/var/tmp/tmp.0.82a234.mps' read.
+Read time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 0 rows and 1 columns.
+MIP Presolve modified 5 coefficients.
+Reduced MIP has 10 rows, 27 columns, and 50 nonzeros.
+Reduced MIP has 27 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.04 ticks)
+Found incumbent of value 444.000000 after 0.00 sec. (0.10 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 10 rows, 27 columns, and 50 nonzeros.
+Reduced MIP has 27 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.03 ticks)
+Probing time = 0.00 sec. (0.01 ticks)
+Clique table members: 26.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (0.02 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                          444.0000        0.0000           100.00%
+*     0+    0                          284.0000        0.0000           100.00%
+      0     0      242.3500     5      284.0000      242.3500       11   14.67%
+      0     0      274.0000     5      284.0000      Cuts: 11       17    3.52%
+      0     0      279.2706     7      284.0000       Cuts: 4       23    1.67%
+      0     0        cutoff            284.0000      284.0000       23    0.00%
+Elapsed time = 0.01 sec. (0.44 ticks, tree = 0.01 MB, solutions = 2)
+
+Clique cuts applied:  1
+Cover cuts applied:  4
+Zero-half cuts applied:  1
+Gomory fractional cuts applied:  5
+
+Root node processing (before b&c):
+  Real time             =    0.01 sec. (0.44 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.01 sec. (0.44 ticks)
+
+Solution pool: 2 solutions saved.
+
+MIP - Integer optimal solution:  Objective =  2.8400000000e+02
+Solution time =    0.01 sec.  Iterations = 23  Nodes = 0
+Deterministic time = 0.44 ticks  (56.14 ticks/sec)
+
+
+Solution pool written to file '/var/tmp/tmp.0.82a234.sol'.

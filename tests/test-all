@@ -1,0 +1,56 @@
+#!/bin/bash
+# Test whether cmpl exist or not 
+test -s ../bin/MpsSolver; r0=$?
+test -s ../bin/MpsSolver.exe; r1=$?
+
+isGurobi=1
+isCplex=1
+isScip=1
+
+
+if [ "$r0" = 0 -o "$r1" = 0 ]; then
+
+    echo "######### start MpsSolver tests ##############################"
+
+	./test-mpsSolver -problem=diet.mps -objSense=min -silent 
+    ./test-mpsSolver -problem=transportation.mps -objSense=min -ignoreZeros -silent 
+    
+    ./test-mpsSolver -problem=prodmix-fc-threshold.mps -solver=glpk -silent -solutionCsv
+    ./test-mpsSolver -problem=prodmix-mehrperiodig-losgroesse.mps -silent -displayVars=q[*+y[*+x*
+    ./test-mpsSolver -problem=prodmix-mehrperiodig-losgroesse-glpk.mps -solver=glpk -silent -displayVars=q[*+y[*+x* -solutionXml=prodmix-mehrperiodig-losgroesse-glpk.xsol
+    ./test-mpsSolver -problem=transhipment.mps -silent -solutionCsv -objSense=min -ignoreZeros
+    ./test-mpsSolver -problem=shortest-path.mps -silent -solutionXml -objSense=min -ignoreZeros -ignoreCons
+    ./test-mpsSolver -problem=emptyRuns.mps -silent -solutionAscii -objSense=min -ignoreZeros
+    ./test-mpsSolver -problem=cross-docking.mps -silent -solutionAscii -objSense=min -ignoreZeros -ignoreCons -displayVars=x* -solutionAscii
+    ./test-mpsSolver -problem=covering-location.mps -objSense=min -silent -solutionAscii
+    ./test-mpsSolver -problem=max-covering-location.mps -silent -solutionXml -ignoreZeros -solver=glpk
+   
+    if [ "$isScip" = 1 ]; then 
+        ./test-mpsSolver -problem=prodmix-verfahren.mps -objSense=max -solver=scip -silent -solutionAscii
+        ./test-mpsSolver -problem=pilots.mps -silent -solutionXml -objSense=max -ignoreZeros -ignoreCons -solver=scip
+         
+    fi
+    if [ "$isGurobi" = 1 ]; then 
+        ./test-mpsSolver -problem=transport-multi-commodity.mps -silent -solutionAscii -objSense=min -displayCons=f* -solver=gurobi
+        ./test-mpsSolver -problem=covering-location-gurobi-solutionpool.mps -objSense=min -solver=gurobi -solutionPool -silent -solutionCsv
+        ./test-mpsSolver -problem=warehouse.mps -objSense=min -solver=gurobi -solutionPool -silent -solutionXml -ignoreZeros -solutionAscii
+    fi
+    if [ "$isCplex" = 1 ]; then 
+        ./test-mpsSolver -problem=transport-foster-single-source.mps -objSense=min -solver=cplex -solutionPool -silent -solutionAscii -ignoreZeros
+    	./test-mpsSolver -problem=covering-location-cplex-solutionpool.mps -objSense=min -solver=cplex -solutionPool -silent -solutionXml
+        ./test-mpsSolver -problem=tsp-poland.mps -objSense=min -solver=cplex -silent -solutionCsv -mip/tolerances/mipgap=0.1 -ignoreZeros
+    fi
+    
+
+
+ 
+    echo "######### MpsSolver tests done  ###############################"
+    
+    if [ -f cplex.log ] ; then rm cplex.log ; fi
+	if [ -f gurobi.log ] ; then rm gurobi.log ; fi
+    
+    
+else 
+	echo "MpsSolver does not exist in ../bin"
+fi
+

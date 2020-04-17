@@ -1,0 +1,41 @@
+******************************** MpsSolver ***************************************************************************************************
+
+MpsSolver enables a user to solve a Mps file using different solver (CBC (by default), GLPK, Gurobi, SCIP and CPLEX).
+
+MpsSolver is an open source project licensed under GPL. It is written in C++ and is available 
+for most of the relevant operating systems (Windows, OS X and Linux). 
+MpsSolver is a project of the Technical University of Applied Sciences Wildau.
+
+USAGE 
+
+MpsSolver problem=<mpsFileName.mps> [options]*" << endl ;
+ Options
+ -solver=<cbc|gkpk|scip|cplex|gurobi>           -	Specification of the solver 
+ -<solverOptionKey>=<solverOptionValue>         -	Specification of solver specific options 
+ -obj=<objectiveFunctionName>                   -	Specification of name of the objective function 
+ -objSense=<min|max>                            -	Specification of the objective sense 
+ -intRelax                                      -	Enables integer relaxation 
+ -silent                                        -	Suppresses output on stdOut 
+ -ignoreZeros                                   -	Shows only activities unequal to zero in the solution(s) 
+ -ignoreVars                                    -	Suppresses variables in the solution(s) 
+ -ignoreCons                                    -	Suppresses constraints in the solution(s) 
+ -solutionPool                                  -	Shows multiple solutions (only Cplex and Gurobi) 
+ -displayVars=<varPattern1[+varPattern2]*       -	Shows only variables matching one of the varPatterns in the solution(s) 
+ -displayCons=<conPattern1[+conPattern2]*       -	Shows only constraints matching one of the conPatterns in the solution(s) 
+ -solutionAscii[=<solutionfile>]                -	Writes the solution(s) as Ascii file, the filename can be specified (default mpsFileName.sol)  
+ -solutionCsv[=<solutionfile>]                  -	Writes the solution(s) as Csv file, the filename can be specified (default mpsFileName.csv)  
+ -solutionXml[=<solutionfile>]                  -	Writes the solution(s) as Xml file, the filename can be specified (default mpsFileName.xsol)  
+
+
+INSTALLATION
+cd src
+make
+
+Additionally, the supported solvers have to be installed. The full file names of the sokver binaries have to be specified in MpsSolver.opt
+
+
+
+
+
+
+ 

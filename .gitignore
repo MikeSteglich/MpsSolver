@@ -1,3 +1,10 @@
+# Qt Creator stuff 
+MpsSolver.*
+
+#macOs stuff
+
+-DS_Store
+
 # Prerequisites
 *.d
 
@@ -30,3 +37,5 @@
 *.exe
 *.out
 *.app
+.DS_Store
+bin/MpsSolver
