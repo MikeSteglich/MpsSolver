@@ -1,5 +1,4 @@
-******************************** MpsSolver ***************************************************************************************************
-
+******************************** MpsSolver *********************************************
 MpsSolver enables a user to solve a Mps file using different solvers (CBC (by default), GLPK, Gurobi, SCIP and CPLEX).
 
 MpsSolver is an open source project licensed under GPL. It is written in C++ and is available 
