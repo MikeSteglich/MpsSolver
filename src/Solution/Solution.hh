@@ -155,14 +155,13 @@ public:
     inline string status() { return _status;}
 
     /**
-     * @brief sets the status of the solution
-     * @param status
+     * @brief returns the status of the solution
+     * @return      status
      */
     inline void setStatus(string status) { _status=status;}
-
     /**
-     * @brief returns the objective function value of the solution
-     * @return
+     * @brief returns the status of the solution
+     * @return      status
      */
     inline double value() { return _value;}
 
@@ -173,8 +172,8 @@ public:
     inline void setValue(double value) { _value=value;}
 
     /**
-     * @brief returns all variables
-     * @return  pointer to a vector of the SolutionElement objects of all variables
+     * @brief sets the objective function value of the solution
+     * @param value     objective function value of the solution
      */
     inline vector<SolutionElement>* variables() { return &_variables;}
 

@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------------
-Problem              warehouse.cmpl
+Problem              warehouse
 Nr. of variables     28
 Nr. of constraints   10
 Objective name       line_1
@@ -11,7 +11,7 @@ Display constraints  nonzero constraints (all)
 
 Solution nr.         1
 Objective status     integer optimal solution
-Objective value      284 (min!)
+Objective value      284 (MIN!)
 
 Variables 
 Name                 Type            Activity         Lower bound         Upper bound            Marginal
@@ -42,7 +42,7 @@ line_11                 L                 -45                -inf               
 
 Solution nr.         2
 Objective status     integer feasible solution
-Objective value      298 (min!)
+Objective value      298 (MIN!)
 
 Variables 
 Name                 Type            Activity         Lower bound         Upper bound            Marginal
@@ -67,11 +67,14 @@ line_4                  E                   1                   1               
 line_5                  E                   1                   1                   1                   -
 line_6                  E                   1                   1                   1                   -
 line_7                  E                   1                   1                   1                   -
+line_8                  L                  -5                -inf                   0                   -
+line_10                 L                 -35                -inf                   0                   -
+line_11                 L                 -10                -inf                   0                   -
 ---------------------------------------------------------------------------------------------------------
 
 Solution nr.         3
 Objective status     integer feasible solution
-Objective value      347 (min!)
+Objective value      347 (MIN!)
 
 Variables 
 Name                 Type            Activity         Lower bound         Upper bound            Marginal
@@ -96,4 +99,7 @@ line_4                  E                   1                   1               
 line_5                  E                   1                   1                   1                   -
 line_6                  E                   1                   1                   1                   -
 line_7                  E                   1                   1                   1                   -
+line_8                  L                 -30                -inf                   0                   -
+line_10                 L                 -10                -inf                   0                   -
+line_11                 L                 -10                -inf                   0                   -
 ---------------------------------------------------------------------------------------------------------

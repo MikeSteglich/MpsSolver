@@ -1,11 +1,11 @@
 <?xml version = "1.0" encoding="UTF-8" standalone="yes"?>
 <CmplSolutions version="1.1">
    <general>
-       <instanceName>warehouse.cmpl</instanceName>
+       <instanceName>warehouse</instanceName>
        <nrOfVariables>28</nrOfVariables>
        <nrOfConstraints>10</nrOfConstraints>
        <objectiveName>line_1</objectiveName>
-       <objectiveSense>min</objectiveSense>
+       <objectiveSense>MIN</objectiveSense>
        <nrOfSolutions>3</nrOfSolutions>
        <solverName>GUROBI</solverName>
        <solverMsg>normal</solverMsg>
@@ -54,6 +54,9 @@
            <constraint idx="3" name="line_5" type="E" activity="1" lowerBound="1" upperBound="1" marginal="NaN"/>
            <constraint idx="4" name="line_6" type="E" activity="1" lowerBound="1" upperBound="1" marginal="NaN"/>
            <constraint idx="5" name="line_7" type="E" activity="1" lowerBound="1" upperBound="1" marginal="NaN"/>
+           <constraint idx="6" name="line_8" type="L" activity="-5" lowerBound="-inf" upperBound="0" marginal="NaN"/>
+           <constraint idx="8" name="line_10" type="L" activity="-35" lowerBound="-inf" upperBound="0" marginal="NaN"/>
+           <constraint idx="9" name="line_11" type="L" activity="-10" lowerBound="-inf" upperBound="0" marginal="NaN"/>
        </linearConstraints>
    </solution>
    <solution idx="2" status="integer feasible solution" value="347">
@@ -75,6 +78,9 @@
            <constraint idx="3" name="line_5" type="E" activity="1" lowerBound="1" upperBound="1" marginal="NaN"/>
            <constraint idx="4" name="line_6" type="E" activity="1" lowerBound="1" upperBound="1" marginal="NaN"/>
            <constraint idx="5" name="line_7" type="E" activity="1" lowerBound="1" upperBound="1" marginal="NaN"/>
+           <constraint idx="6" name="line_8" type="L" activity="-30" lowerBound="-inf" upperBound="0" marginal="NaN"/>
+           <constraint idx="8" name="line_10" type="L" activity="-10" lowerBound="-inf" upperBound="0" marginal="NaN"/>
+           <constraint idx="9" name="line_11" type="L" activity="-10" lowerBound="-inf" upperBound="0" marginal="NaN"/>
        </linearConstraints>
    </solution>
 </CmplSolutions>

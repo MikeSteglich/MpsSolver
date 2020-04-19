@@ -224,7 +224,7 @@ void SolutionCsv::writeVarValues(unsigned long i, unsigned long j , ostream& ost
     ostr << _sol->solution(i)->variable(j)->lowerBound() << ";";
     ostr << _sol->solution(i)->variable(j)->upperBound() << ";";
     if (_sol->hasMarginal())
-        ostr <<  right<< _sol->solution(i)->variable(j)->marginal() << ";";
+        ostr <<  right<< _sol->solution(i)->variable(j)->marginal() ;
     else
         ostr  << "-" ;
     ostr << endl;
@@ -247,7 +247,7 @@ void SolutionCsv::writeConValues( unsigned long i, unsigned long j , ostream& os
 
     ostr  << _sol->solution(i)->constraint(j)->upperBound() << ";";
     if (_sol->hasMarginal())
-        ostr << _sol->solution(i)->constraint(j)->marginal() << ";";
+        ostr << _sol->solution(i)->constraint(j)->marginal() ;
     else
         ostr  << "-" ;
     ostr << endl;
